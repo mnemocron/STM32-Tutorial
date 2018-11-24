@@ -1,0 +1,121 @@
+%%---Main Packages----------------------------------------------------------------------
+
+\usepackage[english, ngerman]{babel}	%Mul­tilin­gual sup­port for Plain TeX or LaTeX
+\usepackage[T1]{fontenc}				%Stan­dard pack­age for se­lect­ing font en­codings
+\usepackage[utf8]{inputenc}				%Ac­cept dif­fer­ent in­put en­cod­ings
+\usepackage{graphicx} 					%En­hanced sup­port for graph­ics
+\usepackage{float}						%Im­proved in­ter­face for float­ing ob­jects
+
+
+%%---Optional Packages------------------------------------------------------------------
+
+\usepackage[pdftex,dvipsnames,table]{xcolor}%Driver-in­de­pen­dent color ex­ten­sions for LaTeX
+\usepackage[hidelinks]{hyperref}		%Ex­ten­sive sup­port for hy­per­text in LaTeX
+\usepackage{amsmath}					%AMS math­e­mat­i­cal fa­cil­i­ties for LaTeX
+%\usepackage{amsthm}					%Type­set­ting the­o­rems (AMS style)
+%\usepackage{amssymb}					%Type­set­ting the­o­rems (AMS style)
+\usepackage{pdfpages}					%In­clude PDF doc­u­ments in LaTeXmns
+\usepackage{todonotes}					%Mark­ing things to do in a LaTeX doc­u­ment
+%\usepackage{siunitx} 					%A com­pre­hen­sive (SI) units pack­age
+\usepackage{listings}					%Type­set source code list­ings us­ing LaTeX
+%\usepackage{pdflscape}					%Make land­scape pages dis­play as land­scape
+%\usepackage{array}						%Ex­tend­ing the ar­ray and tab­u­lar en­vi­ron­ments
+%\usepackage{imakeidx}					%A pack­age for pro­duc­ing mul­ti­ple in­dexes
+\usepackage{subfigure}					%Fig­ures di­vided into sub­fig­ures
+%\usepackage{booktabs}					%Publi­ca­tion qual­ity ta­bles in LaTeX
+%\usepackage{multirow}					%Create tab­u­lar cells span­ning mul­ti­ple rows
+%\usepackage{multicol}					%In­ter­mix sin­gle and mul­ti­ple columns
+\usepackage{tabularx}					%Tab­u­lars with ad­justable-width columns
+%\usepackage{xargs}                     %De­fine com­mands with many op­tional ar­gu­ments
+%\usepackage{cite}						%Im­proved ci­ta­tion han­dling in LaTeX
+\usepackage{setspace}					%Set space be­tween lines
+%\usepackage{textgreek}					%Upright greek let­ters in text
+%\usepackage[bottom]{footmisc}			%A range of foot­note op­tions
+%\usepackage{footnote}					%Im­prove on LaTeX's foot­note han­dling
+%\usepackage{verbatim}					%Reim­ple­men­ta­tion of and ex­ten­sions to LaTeX ver­ba­tim
+\usepackage{textcomp}					%LaTeX sup­port for the Text Com­pan­ion fonts
+%\usepackage[pagesize]{typearea}		%Set page mar­gins
+%\usepackage{xspace}
+%\usepackage{courier}                   %Monospaced font for listings package
+
+
+%%---My Packages------------------------------------------------------------------------
+
+\usepackage[left=2cm, right=2cm, bottom=2cm, headsep=1.5cm]{geometry} % Einstellung Seitenränder
+\usepackage{lmodern}
+\usepackage{scrpage2}					%Kopf- und Fusszeile
+\usepackage{lscape}
+\usepackage{tikz}						%Organigramm
+\usetikzlibrary{trees}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{positioning}
+\usepackage{abstract}
+\usepackage{etoolbox}
+
+
+%%---Definitions----------------- ------------------------------------------------------
+
+%%Tabel-Definitions: (requires \usepackage{tabularx})
+%\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}    %column-width and alignment
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+
+%%---Settings---------------------------------------------------------------------------
+
+\bibliographystyle{IEEEtran}			%Defines the Bib. Style (Harvard, IEEE etc.)
+\graphicspath{{./images/}}				%Defines the graphicspath
+%\geometry{twoside=false}				%twoside=false disables the "bookstyle" => one sided document
+\setlength{\marginparwidth}{2cm}
+\overfullrule=5em						%Creates a black rule if text goes over the margins => debugging
+\setlength{\parindent}{0pt}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ohead{\headmark}
+\automark[section]{chapter}
+\setheadsepline{0.4pt}
+
+%%Listings-Settings: (requires \usepackage{listings})
+% Example with Matlab Code:
+%\lstset{language=Matlab,%
+%    basicstyle=\footnotesize\ttfamily,
+%    breaklines=false,%
+%    morekeywords={matlab2tikz},
+%    keywordstyle=\color{blue},%
+%    tabsize=4,
+%    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+%    identifierstyle=\color{black},%
+%    stringstyle=\color{mylilas},
+%    commentstyle=\color{mygreen},%
+%    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+%    numbers=left,%
+%    numberstyle={\tiny \color{black}},% size of the numbers
+%    numbersep=9pt, % this defines how far the numbers are from the text
+%    emph=[1]{switch, case, otherwise, for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+%    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+%}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}

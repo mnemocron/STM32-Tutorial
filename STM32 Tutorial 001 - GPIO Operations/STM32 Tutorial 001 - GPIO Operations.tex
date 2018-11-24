@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}	%article, report, 
+                                        %book, beamer, standalone
+%%---PACKAGES, DEFINITIONS, SETTINGS----------------------------------------------------
+\input{Header}			                %loads all packages, definitions and settings
+
+\begin{document}
+
+%%---COMMANDS---------------------------------------------------------------------------
+% command "resumesections" to resume section numbering after using "appendix"
+\newcounter{savedsection}
+\preto\appendix{\setcounter{savedsection}{\arabic{section}}}             % remembering!
+\newcommand\resumesections{                    % the \appendix command with some tweaks
+	\setcounter{section}{\arabic{savedsection}}                % restore section number
+	\gdef\thesection{\arabic{section}}
+}
+
+%%---TITLEPAGE--------------------------------------------------------------------------
+\begin{titlepage}
+	\thispagestyle{scrheadings}
+%	\ihead{\includegraphics[scale=1.0]{images/FHNW_HT_10mm.jpg}}
+	\renewcommand*{\pagemark}{}
+	\begin{center}
+		\vspace*{0.5cm}
+		\textbf{\begin{Huge}STM32 Tutorial 001\end{Huge}}\\[0.2cm]
+		\begin{figure}[h!]
+			\centering
+%			\includegraphics[scale=0.13]{images/Nebo-M_mobile_multiband_radar_system.jpg}
+		\end{figure}
+		\newcommand{\HRule}{\rule{\linewidth}{0.2mm}}
+		\HRule \\[0.3cm]
+		{\begin{Huge}\textbf{GPIO Operations using Hardware Abstraction Libraries (HAL)}\end{Huge}}\\[0.2cm]
+		\HRule \\[0.3cm]
+		\textbf{On NUCLEO F103RB}
+		\vspace*{0.3cm}
+		
+		Getting started in embedded software engineering on the STM32 plattform. Using STM32CubeMX, Keil uVision 5 (MDK ARM) and Hardware Abstraction Libraries (HAL). Basic understanding of the C language, especially pointers, are presumed.
+
+		\vspace*{1cm}
+		Simon Burkhardt, {\today}
+	\end{center}
+	
+\end{titlepage}
+
+%%---TABLE of CONTENTS------------------------------------------------------------------
+\pagenumbering{Roman}		
+\selectlanguage{english}
+\tableofcontents
+\clearpage
+
+%%---TEXT-------------------------------------------------------------------------------
+%{\includegraphics[scale=1.0]{images/FHNW_HT_10mm.jpg}}
+\ohead{STM32 Tutorial 001 \\GPIO Operations}
+\cfoot{\pagemark}
+\pagenumbering{arabic}
+
+% Elektro-Teil: Mathem. Teil, Berechnungen
+\include{sections/cubemx_gpio}
+
+%%---BIBLIOGRAPHY-----------------------------------------------------------------------
+\section{Bibliography}
+
+\begingroup
+\renewcommand{\section}[2]{}
+\bibliography{literature/Bibliography}
+\endgroup
+
+
+%%---ANHANG-----------------------------------------------------------------------------
+%\include{sections/Appendix}
+%\resumesections
+
+
+%%---NOTES for DEBUG--------------------------------------------------------------------
+%%requires \usepackage{todonotes})
+%\newpage
+%\listoftodos[\section{Todo-Notes}]
+
+\end{document}
