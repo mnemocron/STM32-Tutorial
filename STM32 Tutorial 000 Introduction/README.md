@@ -13,6 +13,11 @@ I will point out sources of information and I will show how to use this informat
 
 ### IDE
 
+The following document gives an overview on the available IDEs and tools. 
+In my tutorials I am going to use Keil µVision 5.
+
+- Getting started with STM32 Nucleo board software  development tools (User Manual) [UM1727](https://www.st.com/content/ccc/resource/technical/document/user_manual/1b/03/1b/b4/88/20/4e/cd/DM00105928.pdf/files/DM00105928.pdf/jcr:content/translations/en.DM00105928.pdf)
+
 #### STM32CubeMX Initialization Code Generator
 
 - **[STM32CubeMX Download](https://www.st.com/en/development-tools/stm32cubemx.html)**
@@ -81,6 +86,33 @@ The following documents contain the documentation for the HAL libraries provided
 - Description of **STM32F7** HAL and low-layer drivers **[UM1905](https://www.st.com/content/ccc/resource/technical/document/user_manual/45/27/9c/32/76/57/48/b9/DM00189702.pdf/files/DM00189702.pdf/jcr:content/translations/en.DM00189702.pdf)** (pdf)
 - Description of **STM32H7** HAL and low-layer drivers **[UM2217](https://www.st.com/content/ccc/resource/technical/document/user_manual/group0/40/ee/88/53/f6/1e/4c/87/DM00392525/files/DM00392525.pdf/jcr:content/translations/en.DM00392525.pdf)** (pdf)
 
+##### STM32 Evaluation Boards
+
+These files are a good reference if you want to design custom PCB projects which encorporate an STM32 MCU. The documentation contains schematics to the Nucleo boards. 
+
+**STM32 Nucleo Boards**
+
+(Nucleo-64/144 = pin count on the MCU e.g. LQFP64)
+
+- STM32 Nucleo-32 boards User Manual **[UM1956](https://www.st.com/content/ccc/resource/technical/document/user_manual/e3/0e/88/05/e8/74/43/a0/DM00231744.pdf/files/DM00231744.pdf/jcr:content/translations/en.DM00231744.pdf)** (pdf)
+- STM32 Nucleo-64 boards User Manual **[UM1724](https://www.st.com/content/ccc/resource/technical/document/user_manual/98/2e/fa/4b/e0/82/43/b7/DM00105823.pdf/files/DM00105823.pdf/jcr:content/translations/en.DM00105823.pdf)** (pdf)
+- STM32 Nucleo-64P boards User Manual **[UM2206](https://www.st.com/content/ccc/resource/technical/document/user_manual/group0/ff/5d/51/50/db/12/47/98/DM00387966/files/DM00387966.pdf/jcr:content/translations/en.DM00387966.pdf)** (pdf)
+- STM32 Nucleo-144 boards User Manual **[UM1974](https://www.st.com/content/ccc/resource/technical/document/user_manual/group0/26/49/90/2e/33/0d/4a/da/DM00244518/files/DM00244518.pdf/jcr:content/translations/en.DM00244518.pdf)** (pdf)
+
+**STM32 Discovers Boards**
+
+Each Discovery board has its own manual. Use Google to find the appropriate "User Manual".
+
+- Discovery kit with STM32F407VG MCU **[UM1472](https://www.st.com/content/ccc/resource/technical/document/user_manual/70/fe/4a/3f/e7/e1/4f/7d/DM00039084.pdf/files/DM00039084.pdf/jcr:content/translations/en.DM00039084.pdf)** (pdf)
+
+#### Datasheets
+
+Device specific. For example...
+
+- [STM32F103RB Product Page](https://www.st.com/en/microcontrollers-microprocessors/stm32f103rb.html)
+- [STM32F103c8 Datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf)
+
+
 ---
 
 ### JTAG Debugers / Programmers
@@ -90,6 +122,30 @@ amongst others...
 - STMicroelectronics [ST-Link/V2](https://www.st.com/en/development-tools/st-link-v2.html) (included on STM32-Nucleo boards) (~ $25)
 - 1bitsquared [Black Magic Probe](https://github.com/blacksphere/blackmagic/wiki) ([store](https://1bitsquared.com/products/black-magic-probe)) (~ $60)
 - Segger [J-Link EDU Mini](https://www.segger.com/products/debug-probes/j-link/models/j-link-edu-mini/) (~ $25)
+
+---
+
+**MIT License**
+
+Copyright (c) 2020 Simon Burkhardt / simonmartin.ch / github.com/mnemocron
+
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+> The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
 
