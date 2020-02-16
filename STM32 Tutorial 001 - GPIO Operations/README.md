@@ -181,7 +181,7 @@ Let's choose this `HAL_GPIO_WritePin` and add the following lines of code within
     /* USER CODE BEGIN 3 */
     HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);  // LED on
     HAL_Delay(500);
-    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);  // LED off
+    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);  // LED off
     HAL_Delay(500);
   }
   /* USER CODE END 3 */
