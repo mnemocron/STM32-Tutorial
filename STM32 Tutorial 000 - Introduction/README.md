@@ -1,4 +1,4 @@
-# STM32 Tutoriall 000 - Intro
+# STM32 Tutorial 000 - Intro
 
 Embedded Software Programming on the STM32 Plattform
 

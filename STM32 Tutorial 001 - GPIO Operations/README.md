@@ -1,4 +1,4 @@
-# STM32 Tutoriall 001 - GPIO Operations
+# STM32 Tutorial 001 - GPIO Operations
 
 Embedded Software Programming on the STM32 Plattform
 

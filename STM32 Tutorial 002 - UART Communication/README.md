@@ -1,4 +1,4 @@
-# STM32 Tutoriall 002 - UART Communication
+# STM32 Tutorial 002 - UART Communication
 
 Embedded Software Programming on the STM32 Plattform
 
@@ -20,6 +20,7 @@ Furthermore, for this tutorial you also need a COM-Terminal emulator like [PuTTY
 - STM32CubeMX installed
 - arm Keil µVision 5 IDE installed
 - (read through _Tutorial 001 - GPIO Operations_)
+- COM-Terminal emulator [PuTTY](https://www.putty.org/) or [Termite](https://www.compuphase.com/software_termite.htm)
 
 ---
 
@@ -39,6 +40,9 @@ If you check the default settings of the `USART2` communication interface, you w
 
 ![STM32CubeMX Uart settings](images/STM32CubeMX_001.png)
 
+Here the STM32CubeMX shows you all the configuration parameters that a peripheral device like `USARTx` has.
+The most important here are the **Baud Rate**, **Word Lenght**, **Parity-** and **Stop Bits**.
+
 > **Note**: The reason for using the `USART2` interface on GPIO pins `PA2` (`Tx`) and `PA3` (`Rx`) in this example is the following: The `USART2` interface is connected to the STLink/V2 debugger. 
 > On your computer it should be connected on one of your `COM` ports (Windows) when you connect the Nucleo board through USB.
 
@@ -50,7 +54,7 @@ Click on `GENERATE CODE` and open the project in Keil µVision 5.
 
 ---
 
-## Programm the `printf` function
+## Sending text to the console
 
 As we have seen in the previous example, the HAL library offers a couple of functions to use peripheral devices on your STM32 MCU.
 
@@ -85,6 +89,10 @@ Use the specified baudrate from the STM32CubeMX settings.
 Now, this way of printing information is very unhandy.
 A better option is to use the `printf` function from the C standard IO library.
 Use the following steps to **redirect the printf output to the UART interface**.
+
+---
+
+## Programm the `printf` function
 
 First, you need to include the standard IO C library.
 
@@ -148,6 +156,8 @@ For example:
   }
   /* USER CODE END 3 */
 ```
+
+---
 
 ## Reading UART from Terminal
 
