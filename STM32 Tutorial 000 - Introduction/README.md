@@ -46,6 +46,19 @@ Uses the open source `gcc-arm-none-eabi` compiler.
 
 For the basic introduction I will use the STM32F103 Nucleo board and link to the files related to this board.
 
+#### STM32CubeMX Documents
+
+The STM32CubeMX Software has all the Application Notes and User Manuals related to the current MCU available for download through the help menu.
+
+![STM32CubeMX Help Menu](images/CubeMX_Docs_Help.png)
+
+![STM32CubeMX Help Menu](images/CubeMX_Docs.png)
+
+Some peripheral drivers or software libraries may have the documentation also in the configuration menu.
+
+![STM32CubeMX Help Menu](images/CubeMX_Docs_Periph.png)
+
+
 #### ARM
 
 Here you will find more generic documentation about the ARM Cortex<span><sup>&trade;</sup></span>-M Core.
