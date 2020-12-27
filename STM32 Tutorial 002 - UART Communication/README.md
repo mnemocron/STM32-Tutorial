@@ -105,6 +105,8 @@ First, you need to include the standard IO C library.
 
 Next, you redirect the `printf` to the `USART2` interface using the just discovered `HAL_UART_Transmit` function.
 
+**Code for Keil µVision**:
+
 ```c
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
@@ -131,10 +133,48 @@ int ferror(FILE *f){
 /* USER CODE END 0 */
 ```
 
+**Code for `gcc-arm-none-eabi`** (STM32CubeMX IDE and SW4STM32):
+
+```c
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN PFP */
+/**
+ *  @see https://github.com/STMicroelectronics/STM32CubeF4/blob/master/Projects/STM32F401RE-Nucleo/Examples/UART/UART_Printf/Src/main.c
+ */
+#ifdef __GNUC__
+/* With GCC, small printf (option LD Linker->Libraries->Small printf
+ set to 'Yes') calls __io_putchar() */
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif /* __GNUC__ */
+/* USER CODE END PFP */
+```
+
+```c
+/* USER CODE BEGIN 4 */
+/**
+ * @brief  Retargets the C library printf function to the USART.
+ * @param  None
+ * @retval None
+ * @see    https://github.com/STMicroelectronics/STM32CubeF4/blob/master/Projects/STM32F401RE-Nucleo/Examples/UART/UART_Printf/Src/main.c
+ */
+PUTCHAR_PROTOTYPE {
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the EVAL_COM1 and Loop until the end of transmission */
+  HAL_UART_Transmit(&huart3, (uint8_t *) &ch, 1, 1);
+
+  return ch;
+}
+/* USER CODE END 4 */
+```
+
+
 Further reading:
 
 - _"How printf to specific USART?"_ [community.arm.com](https://community.arm.com/developer/tools-software/tools/f/keil-forum/34791/how-printf-to-specific-usart)
 - _"STM32 printf() redirect"_ [stackoverflow.com](https://stackoverflow.com/questions/45535126/stm32-printf-redirect)
+- official example code [github.com/STMicroelectronics](https://github.com/STMicroelectronics/STM32CubeF4/blob/master/Projects/STM32F401RE-Nucleo/Examples/UART/UART_Printf/Src/main.c)
 
 Now you can simply use the `printf` function from your main code as you like.
 For example:

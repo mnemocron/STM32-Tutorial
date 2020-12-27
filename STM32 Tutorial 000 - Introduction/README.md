@@ -14,7 +14,7 @@ I will point out sources of information and I will show how to use this informat
 ### IDE
 
 The following document gives an overview on the available IDEs and tools. 
-In my tutorials I am going to use Keil µVision 5.
+In my tutorials I am going to use Keil µVision 5 and STM32CubeMX IDE.
 
 - Getting started with STM32 Nucleo board software  development tools (User Manual) [UM1727](https://www.st.com/content/ccc/resource/technical/document/user_manual/1b/03/1b/b4/88/20/4e/cd/DM00105928.pdf/files/DM00105928.pdf/jcr:content/translations/en.DM00105928.pdf)
 
@@ -23,6 +23,12 @@ In my tutorials I am going to use Keil µVision 5.
 - **[STM32CubeMX Download](https://www.st.com/en/development-tools/stm32cubemx.html)**
 - User Manual STM32CubeMX for STM32 configuration and initialization C code generation **[UM1718](https://www.st.com/content/ccc/resource/technical/document/user_manual/10/c5/1a/43/3a/70/43/7d/DM00104712.pdf/files/DM00104712.pdf/jcr:content/translations/en.DM00104712.pdf)** (pdf)
 
+#### STM32CubeMX IDE
+
+Uses the open source `gcc-arm-none-eabi` compiler. Has the above STM32CubeMX graphical user interface integrated.
+
+- **[STM32CubeMX IDE Download](https://www.st.com/en/development-tools/stm32cubemx.html#overview)**
+- (User Manual STM32CubeMX for STM32 configuration and initialization C code generation **[UM1718](https://www.st.com/content/ccc/resource/technical/document/user_manual/10/c5/1a/43/3a/70/43/7d/DM00104712.pdf/files/DM00104712.pdf/jcr:content/translations/en.DM00104712.pdf)** (pdf))
 
 #### Keil µVision
 
@@ -34,7 +40,7 @@ In my tutorials I will use Keil µVision 5.
 
 #### System Workbench for MCU by AC6 (Open Source)
 
-Uses the open source `gcc-arm-none-eabi` compiler.
+Uses the open source `gcc-arm-none-eabi` compiler. (I heard that it is soon to be outdated or does not support newer MCUs anymore.)
 
 - STMicroelectronics [AC6](https://www.st.com/content/st_com/en/partner/partner-program/partnerpage/AC6.html)
     + [ac6-tools](https://www.ac6-tools.com/content.php/content_SW4MCU/lang_en_GB.xphp)
@@ -56,7 +62,7 @@ The STM32CubeMX Software has all the Application Notes and User Manuals related 
 
 Some peripheral drivers or software libraries may have the documentation also in the configuration menu.
 
-![STM32CubeMX Help Menu](images/CubeMX_Docs_Periph.png)
+![STM32CubeMX Help Menu](images/CubeMX_Docs_periph.png)
 
 
 #### ARM
@@ -71,7 +77,7 @@ It is an engineers job to be able to read manufacturer documentation. This is wh
 Please note that Keil µVision uses a **Package Manager** for Hardware specific drivers and software.
 
 - [arm Developer Documentation](https://developer.arm.com/docs)
-- **[arm Infocenter](http://infocenter.arm.com/help/index.jsp)**
+- **[developer.arm.com](https://developer.arm.com/documentation/)** ( previously: [arm Infocenter](http://infocenter.arm.com/help/index.jsp) )
 
 ##### Architecture Overview
 
@@ -79,7 +85,6 @@ ARM Cortex<span><sup>&trade;</sup></span>-M stands for Microcontroller architect
 
 
 - Cortex<span><sup>&trade;</sup></span>-M0 [Generic User Guide](http://infocenter.arm.com/help/topic/com.arm.doc.dui0497a/DUI0497A_cortex_m0_r0p0_generic_ug.pdf) (pdf) (contains Instruction Set information)
-- Cortex<span><sup>&trade;</sup></span>-M1 Generic User Guide (reference needed)
 - Cortex<span><sup>&trade;</sup></span>-M3 [Generic User Guide](http://infocenter.arm.com/help/topic/com.arm.doc.dui0552a/DUI0552A_cortex_m3_dgug.pdf) (pdf) (contains Instruction Set information)
 - Cortex<span><sup>&trade;</sup></span>-M4 [Generic User Guide](http://infocenter.arm.com/help/topic/com.arm.doc.dui0553b/DUI0553.pdf) (pdf) (contains Instruction Set information)
 - Cortex<span><sup>&trade;</sup></span>-M7 [Generic User Guide](http://infocenter.arm.com/help/topic/com.arm.doc.dui0646a/DUI0646A_cortex_m7_dgug.pdf) (pdf) (contains Instruction Set information)
